@@ -3,14 +3,18 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PerfilComponetComponent } from './Components/perfil-componet/pagina/perfil-componet.component';
+import { HttpClientModule } from '@angular/common/http'; //importar el modulo de http
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PerfilComponetComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
