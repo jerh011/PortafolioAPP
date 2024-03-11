@@ -1,7 +1,67 @@
-<main class="main" *ngIf="perfil">
+<div class="container text-center">
+  <div class="row gy-5">
+    <div class="col order-last">
 
-  <div class="content">
-    <p>perfil-componet works!</p>
-
+    </div>
+    <div class="col">
+      <img class="" src="https://i.ibb.co/VJTdX27/89257845-2445694715535225-5325429597846634496-n.jpg" alt="foto" >
+    </div>
+    <div class="col order-first">
+    
+    </div>
   </div>
-</main>
+  <div class="row gy-5">
+    <div class="p-3"><strong>{{ perfil.nombre }} {{ perfil.segundoNombre }} {{ perfil.apellidoPaterno }} {{ perfil.apellidoMaterno }}</strong></div>
+  </div>
+  <div class="row gy-5">
+    <div class="p-3">Perfil Profesional:</div>
+  </div>
+  <div class="row gy-5">
+    <div class="p-3">Recién con una edad de {{ perfil.edad}}. Graduado en Ingeniería en Sistemas Computacionales con especialización en desarrollo de software. 
+                     Apasionado por la programación y el desarrollo de soluciones tecnológicas innovadoras. Poseo un sólido
+                     conocimiento en lenguajes de programación como C#, Java, JavaScript y TypeScript  así como experiencia en el desarrollo 
+                     de aplicaciones web y móviles.</div>
+  </div>
+  
+  <div class="row gy-5 p-5">
+    <!---------------------------------->
+    
+        <table class="table table-striped">
+          
+          <tbody>
+            <tr class="table-light">
+              <td class="table-light"><strong>Numero Cecluar:</strong></td>
+              <td class="table-light">{{ perfil.numeroCelular }}</td>
+            </tr>
+            <tr class="table-light">
+              <td class="table-light"><strong>Correo: </strong></td>
+              <td class="table-light">{{ perfil.correo }}</td>
+            </tr>
+            <tr class="table-light">
+              <td class="table-light"><strong>Correo: </strong></td>
+              <td class="table-light">{{ perfil.correo1 }}</td>
+            </tr>
+            <tr class="table-light">
+              <td class="table-light"><strong>Facebook: </strong></td>
+              <td class="table-light"><a href="{{ perfil.facebook }}">{{ perfil.facebook }}</a></td>
+            </tr>
+            <tr class="table-light">
+              <td class="table-light"><strong>github: </strong></td>
+              <td class="table-light"><a href="{{ perfil.github }}">{{ perfil.github }}</a></td>
+            </tr>
+          </tbody>
+        </table>
+         
+        
+          
+  
+
+       
+  
+ 
+    <!---------------------------------->
+  </div>
+
+</div>
+
+

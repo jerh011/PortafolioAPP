@@ -9,13 +9,14 @@ import { PerfilServiceService } from '../../../Services/perfil-service.service';
 })
 export class PerfilComponetComponent {
 
-  perfil:Perfil[]=[];
+  title = 'Portafolio';
+  perfil = new Perfil();
+  
 
   constructor(private perfilServiceService: PerfilServiceService){}
 
   ngOnInit():void{
-    this.perfilServiceService.getPerfil().subscribe((result: Perfil[]) => (this.perfil=result));
+    this.perfilServiceService.getPerfilID().subscribe((result: Perfil) => (this.perfil=result));
   }
-  
   
 }
