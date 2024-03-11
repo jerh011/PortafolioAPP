@@ -4,6 +4,11 @@ import { PerfilComponetComponent } from './Components/perfil-componet/pagina/per
 import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { ConsumoDeAPIComponent } from './Components/consumo-de-api/consumo-de-api.component';
 const routes: Routes = [
+
+{
+  path:'',
+  component:PerfilComponetComponent
+},
 {
   path:'Perfil',
   component:PerfilComponetComponent

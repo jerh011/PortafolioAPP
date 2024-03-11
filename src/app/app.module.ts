@@ -8,7 +8,8 @@ import { ProyectosComponent } from './Components/proyectos/proyectos.component';
 import { ConsumoDeAPIComponent } from './Components/consumo-de-api/consumo-de-api.component';
 import { PokedexComponent } from './Components/carousel/pokedex/pokedex.component';
 import { DestionDeTareaComponent } from './Components/carousel/destion-de-tarea/destion-de-tarea.component';
-import { BibliotecaVirtualComponent } from './Components/carousel/biblioteca-virtual/biblioteca-virtual.component'; //importar el modulo de http
+import { BibliotecaVirtualComponent } from './Components/carousel/biblioteca-virtual/biblioteca-virtual.component';
+import { CalculadoraComponent } from './Components/carousel/calculadora/calculadora.component'; //importar el modulo de http
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BibliotecaVirtualComponent } from './Components/carousel/biblioteca-vir
     ConsumoDeAPIComponent,
     PokedexComponent,
     DestionDeTareaComponent,
-    BibliotecaVirtualComponent
+    BibliotecaVirtualComponent,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule,
