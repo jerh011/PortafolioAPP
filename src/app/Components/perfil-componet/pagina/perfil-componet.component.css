@@ -1,4 +1,6 @@
-  
+body{
+  background-color: #69696969;
+}
 
   main {
     width: 100%;
@@ -15,10 +17,16 @@
     width: 100%;
   }
 
- img{
-  border-radius: 200px;
-  width: 200px;
+ .img{
+  border-radius: 90rem;
+  width: 20rem;
   height: auto;
   border-style:inset;
  }
 
+.fondoDiv{
+  background-color: white;
+  padding: 1cm 1cm 1cm 1cm;
+  margin:  1rem 5rem 1rem 5rem;
+  border-radius: 1rem;
+}

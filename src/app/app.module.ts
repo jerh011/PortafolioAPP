@@ -9,7 +9,8 @@ import { ConsumoDeAPIComponent } from './Components/consumo-de-api/consumo-de-ap
 import { PokedexComponent } from './Components/carousel/pokedex/pokedex.component';
 import { DestionDeTareaComponent } from './Components/carousel/destion-de-tarea/destion-de-tarea.component';
 import { BibliotecaVirtualComponent } from './Components/carousel/biblioteca-virtual/biblioteca-virtual.component';
-import { CalculadoraComponent } from './Components/carousel/calculadora/calculadora.component'; //importar el modulo de http
+import { CalculadoraComponent } from './Components/carousel/calculadora/calculadora.component';
+import { HobbiesComponent } from './Components/hobbies/hobbies.component'; //importar el modulo de http
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CalculadoraComponent } from './Components/carousel/calculadora/calculad
     PokedexComponent,
     DestionDeTareaComponent,
     BibliotecaVirtualComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    HobbiesComponent
   ],
   imports: [
     BrowserModule,
