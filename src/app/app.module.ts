@@ -10,7 +10,11 @@ import { PokedexComponent } from './Components/carousel/pokedex/pokedex.componen
 import { DestionDeTareaComponent } from './Components/carousel/destion-de-tarea/destion-de-tarea.component';
 import { BibliotecaVirtualComponent } from './Components/carousel/biblioteca-virtual/biblioteca-virtual.component';
 import { CalculadoraComponent } from './Components/carousel/calculadora/calculadora.component';
-import { HobbiesComponent } from './Components/hobbies/hobbies.component'; //importar el modulo de http
+import { HobbiesComponent } from './Components/hobbies/hobbies.component';
+import { PokeapiComponent } from './Components/consumo-de-api/pokeapi/pokeapi.component';
+import { FotoPokemonComponent } from './Components/consumo-de-api/foto-pokemon/foto-pokemon.component';
+import { TargetaPokemonComponent } from './Components/consumo-de-api/targeta-pokemon/targeta-pokemon.component';
+import { DetallePokemonComponent } from './Components/consumo-de-api/detalle-pokemon/detalle-pokemon.component'; //importar el modulo de http
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { HobbiesComponent } from './Components/hobbies/hobbies.component'; //imp
     DestionDeTareaComponent,
     BibliotecaVirtualComponent,
     CalculadoraComponent,
-    HobbiesComponent
+    HobbiesComponent,
+    PokeapiComponent,
+    FotoPokemonComponent,
+    TargetaPokemonComponent,
+    DetallePokemonComponent
   ],
   imports: [
     BrowserModule,

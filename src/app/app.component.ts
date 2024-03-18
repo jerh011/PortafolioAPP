@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { Perfil } from './Models/Perfil';
-import { NgModule } from '@angular/core';
-
-import { PerfilServiceService } from './Services/perfil-service.service';
-import { RouterOutlet,RouterLink,RouterLinkActive } from '@angular/router';
+import { PerfilServiceService } from './Services/PerfilService/perfil-service.service';
 
 @Component({
   selector: 'app-root',
