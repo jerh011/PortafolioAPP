@@ -4,6 +4,7 @@ export class Perfil{
     segundoNombre= "";
     apellidoPaterno= "";
     apellidoMaterno= "";
+    descripcion="";
     edad= "";
     numeroCelular= "";
     correo= "";

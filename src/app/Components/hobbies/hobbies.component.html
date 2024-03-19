@@ -1,69 +1,55 @@
 <div class="container text-center">
     <div class="row">
-        <!---Warframe-->
-        <div class="col">
+        <ng-container *ngFor="let pasatiempo of pasatiempos; let i = index">
+
+          <!-- Iterar sobre el array de tecnologías en incrementos de 2 -->
+          <!-- Verificar si el índice es par (o sea, es el inicio de una nueva fila) -->
+
+          <div class="col" *ngIf="i % 2 === 0">
+            <!--  <img [src]="tecnologias[i].urlImg" class="img-fluid" alt="{{tecnologias[i].tecnologia}}"> -->
             <div class="p-5">
                 <div>
                     <div class="group overflow-hidden relative shadow-lg max-w-xs">
                         <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
                         <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
-                            </div>
+                        <img class="block group-hover:opacity-40 transition-opacity duration-700"
+                            src="{{pasatiempos[i].urlIMG}}" />
+                        <div
+                            class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
                         </div>
                         <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
                                     transition-all group-hover:top-1/2 group-hover:opacity-100">
                             <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
+                                <!---Nombre del juego-->
+                                <div class="text-xl font-bold">{{pasatiempos[i].nombre}}</div>
                                 <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
                                     <!---Developer-->
                                     <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
+                                        Horas:
                                     </span>
                                     <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
+
                                         <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
+                                        <a>{{pasatiempos[i].horas}}</a>
+
                                     </span>
                                 </div>
 
                                 <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
                                     <!--publicador--->
                                     <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
+                                        Detalle:
                                     </span>
 
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
                                     <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
-                                        </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
+                                        <!--Nombre de publicador --->
+                                        <a>
+                                            {{pasatiempos[i].detalle}}
+                                        </a>
                                     </span>
                                 </div>
+
+
                             </div>
                             <div class="absolute left-0  pl-7 pt-1">
 
@@ -72,369 +58,70 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="p-5">
-                <div>
-                    <div class="group overflow-hidden relative shadow-lg max-w-xs">
-                        <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
-                        <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
+           
+           
+           
+            <ng-container *ngIf="i + 1 < pasatiempos.length">
+
+                <div class="p-5">
+                    <div>
+                        <div class="group overflow-hidden relative shadow-lg max-w-xs">
+                            <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
+                            <!---Imagen Principal-->
+                            <img class="block group-hover:opacity-40 transition-opacity duration-700"
+                                src="{{pasatiempos[i+1].urlIMG}}" />
+                            <div
+                                class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
                             </div>
-                        </div>
-                        <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
-                                    transition-all group-hover:top-1/2 group-hover:opacity-100">
-                            <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
-                                <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
-                                    <!---Developer-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
-                                        <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--publicador--->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
-                                    </span>
-
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
+                            <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
+                                        transition-all group-hover:top-1/2 group-hover:opacity-100">
+                                <div class="py-4 text-xs px-7">
+                                    <!---Nombre del juego-->
+                                    <div class="text-xl font-bold">{{pasatiempos[i+1].nombre}}</div>
+                                    <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
+                                        <!---Developer-->
+                                        <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
+                                            Horas:
                                         </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
-                                    </span>
+                                        <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
+    
+                                            <!---Nombre del la empresa desarroyando y su linc en esteam-->
+                                            <a>{{pasatiempos[i+1].horas}}</a>
+    
+                                        </span>
+                                    </div>
+    
+                                    <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
+                                        <!--publicador--->
+                                        <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
+                                            Detalle:
+                                        </span>
+    
+                                        <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
+                                            <!--Nombre de publicador --->
+                                            <a>
+                                                {{pasatiempos[i+1].detalle}}
+                                            </a>
+                                        </span>
+                                    </div>
+    
+    
                                 </div>
-                            </div>
-                            <div class="absolute left-0  pl-7 pt-1">
-
+                                <div class="absolute left-0  pl-7 pt-1">
+    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="p-5">
-                <div>
-                    <div class="group overflow-hidden relative shadow-lg max-w-xs">
-                        <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
-                        <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
-                            </div>
-                        </div>
-                        <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
-                                    transition-all group-hover:top-1/2 group-hover:opacity-100">
-                            <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
-                                <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
-                                    <!---Developer-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
-                                        <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
-                                    </span>
-                                </div>
+               
+               
+          
+            </ng-container>
+          </div>
 
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--publicador--->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
-                                    </span>
+        </ng-container>
 
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
 
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
-                                        </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="absolute left-0  pl-7 pt-1">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <!---Warframe-->
-        <div class="col">
-            <div class="p-5">
-                <div>
-                    <div class="group overflow-hidden relative shadow-lg max-w-xs">
-                        <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
-                        <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
-                            </div>
-                        </div>
-                        <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
-                                    transition-all group-hover:top-1/2 group-hover:opacity-100">
-                            <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
-                                <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
-                                    <!---Developer-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
-                                        <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--publicador--->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
-                                    </span>
-
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
-                                        </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="absolute left-0  pl-7 pt-1">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="p-5">
-                <div>
-                    <div class="group overflow-hidden relative shadow-lg max-w-xs">
-                        <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
-                        <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
-                            </div>
-                        </div>
-                        <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
-                                    transition-all group-hover:top-1/2 group-hover:opacity-100">
-                            <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
-                                <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
-                                    <!---Developer-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
-                                        <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--publicador--->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
-                                    </span>
-
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
-                                        </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="absolute left-0  pl-7 pt-1">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="p-5">
-                <div>
-                    <div class="group overflow-hidden relative shadow-lg max-w-xs">
-                        <a href="#" class="absolute z-10 top-0 bottom-0 left-0 right-0"></a>
-                        <!---Imagen Principal-->
-                        <img class="block group-hover:opacity-40 transition-opacity duration-700" src="https://cdn.cloudflare.steamstatic.com/steam/apps/230410/hero_capsule.jpg?t=1637183731" />
-                        <div class="absolute bg-black flex items-center group-hover:-top-0 group-hover:opacity-100 duration-700 top-full right-0 w-full opacity-0 h-1/2 transition-all">
-                            <!---Imagen Secunadaria-->
-                            <div class="" style="background-image: url(&quot;https://cdn.cloudflare.steamstatic.com/steam/apps/230410/ss_2d79448091149a8cc790b62e7422615a011d015a.600x338.jpg?t=1637183731&quot;);">
-                                <video class="w-full" autoplay loop="" preload="none" muted="muted">
-                                    <source
-                                        src="https://cdn.cloudflare.steamstatic.com/steam/apps/256860783/microtrailer.webm?t=1637095595?v=3"
-                                        type="video/webm">
-                                </video>
-                            </div>
-                        </div>
-                        <div class="absolute  bg-gradient-to-br duration-700 from-green-800 to-blue-800 text-white block left-0 right-0 top-full text-base h-1/2 w-full opacity-50 
-                                    transition-all group-hover:top-1/2 group-hover:opacity-100">
-                            <div class="py-4 text-xs px-7">
-                                 <!---Nombre del juego-->
-                                <div class="text-xl font-bold">Warframe</div>
-                                <div class="overflow-ellipsis overflow-hidden whitespace-nowrap">
-                                    <!---Developer-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Developer:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                       
-                                        <!---Nombre del la empresa desarroyando y su linc en esteam-->
-                                        <a>Digital Extremes</a>
-                                        
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--publicador--->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        Publisher:
-                                    </span>
-
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">                               
-                                        <!--Nombre de publicador --->
-                                        <a href="https://store.steampowered.com/publisher/DigitalExtremes?snr=1_4_600__629">
-                                            Digital Extremes
-                                        </a> 
-                                    </span>
-                                </div>
-
-                                <div class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                    <!--reseñas-->
-                                    <span class="uppercase text-gray-400 whitespace-nowrap text-xs md:text-sm">
-                                        All Reviews:
-                                    </span>
-                                    <span class="whitespace-nowrap overflow-hidden overflow-ellipsis relative z-20">
-                                        <!--reseñas positivas-->
-                                        <span class="text-positive">
-                                            Very Positive 
-                                        </span>
-                                         <!--Numero-->
-                                        <span class="text-gray-300">(2,912)</span>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="absolute left-0  pl-7 pt-1">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
 </div>
